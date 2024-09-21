@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply</title>
+    <link rel="icon" href="./images/logo.svg" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><img class="logo" src="./images/logo.svg" alt="Logo Icon"
+        /></a>
+        <ul class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./jobs.html">Jobs</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./enhancements.html">Enhancements</a></li>
+          <li><a class="active" href="./apply.html">Apply Now</a></li>
+        </ul>
+        <input
+          type="checkbox"
+          name="toggle-menu-controller"
+          id="toggle-menu-controller"
+          aria-hidden="true"
+        />
+        <label
+          id="mobile-menu-close-trigger"
+          for="toggle-menu-controller"
+          aria-label="Close menu"
+        ></label>
+        <button class="mobile-menu-btn" aria-label="Open mobile menu">
+          <label for="toggle-menu-controller">
+            <img src="./images/menu-icon.svg" alt="Menu Icon" />
+          </label>
+        </button>
+        <ul class="mobile-menu" aria-hidden="true">
+          <li>
+            <label for="toggle-menu-controller" aria-label="Close menu">
+              <img src="./images/menu-close.svg" alt="" />
+            </label>
+          </li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./jobs.html">Jobs</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./enhancements.html">Enhancements</a></li>
+          <li><a class="active" href="./apply.html">Apply Now</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main" id="apply" class="apply">
+      <section class="register-photo" aria-labelledby="welcome-message">
+        <img src="./images/welcome.svg" alt="Welcome illustration" />
+        <h1 id="welcome-message">
+          Welcome!<br />Let's Start the journey together!
+        </h1>
+      </section>
+
+      <section class="form-container">
+        <form
+          action="https://mercury.swin.edu.au/it000000/formtest.php"
+          method="post"
+          aria-labelledby="application-form-title"
+        >
+          <h2 id="application-form-title">Job Application Form</h2>
+
+          <section class="input-group">
+            <label for="First_Name">First Name</label>
+            <input
+              type="text"
+              name="First_Name"
+              id="First_Name"
+              placeholder="Enter first name"
+              pattern="[a-zA-Z ]{1,20}"
+              required
+            />
+            <p class="error-message">
+              First Name is required and only maximum 20 alphabet characters
+              accepted
+            </p>
+          </section>
+
+          <section class="input-group">
+            <label for="Last_Name">Last Name</label>
+            <input
+              type="text"
+              name="Last_Name"
+              id="Last_Name"
+              placeholder="Enter last name"
+              pattern="[a-zA-Z ]{1,20}"
+              required
+            />
+            <p class="error-message">
+              Last Name is required and only maximum 20 alphabet characters
+              accepted
+            </p>
+          </section>
+
+          <section class="input-group">
+            <label for="Email">Email</label>
+            <input
+              type="email"
+              name="Email"
+              id="Email"
+              placeholder="example@example.com"
+              required
+            />
+            <p class="error-message">Email should be in valid email format.</p>
+          </section>
+
+          <section class="input-group">
+            <label for="Phone">Phone</label>
+            <input
+              type="text"
+              name="Phone"
+              id="Phone"
+              placeholder="Enter phone number"
+              pattern="[0-9 ]{8,12}"
+              required
+            />
+            <p class="error-message">
+              Phone number should be 8 to 12 digits long and can contain spaces
+            </p>
+          </section>
+
+          <section class="input-group">
+            <label for="Date_Of_Birth">Date of Birth</label>
+            <input
+              type="text"
+              name="Date_Of_Birth"
+              id="Date_Of_Birth"
+              pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[0-2])/([0-9]{4})"
+              placeholder="dd/mm/yyyy"
+              required
+            />
+            <p class="error-message">
+              Date of Birth Should be in dd/mm/yyyy format. For example,
+              11/01/2002
+            </p>
+          </section>
+
+          <fieldset
+            class="input-group"
+            aria-labelledby="gender-legend"
+            id="gender"
+          >
+            <legend id="gender-legend">Gender</legend>
+            <label for="male">
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="Male"
+                required
+              />
+              Male
+            </label>
+            <label for="female">
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="Female"
+                required
+              />
+              Female
+            </label>
+            <p class="error-message">It is required to choose 1 option.</p>
+          </fieldset>
+
+          <section class="input-group">
+            <label for="Postcode">Postcode</label>
+            <input
+              type="text"
+              name="Postcode"
+              id="Postcode"
+              pattern="[0-9]{4}"
+              placeholder="1234"
+              required
+            />
+            <p class="error-message">
+              Postcode should be exactly 4 digits with no spaces.
+            </p>
+          </section>
+
+          <section class="input-group">
+            <label for="Street">Street</label>
+            <input
+              type="text"
+              name="Street"
+              id="Street"
+              placeholder="St.."
+              is
+              required
+              and
+              pattern="[a-zA-Z0-9 ]{1,40}"
+              required
+            />
+            <p class="error-message">
+              Street is required and only maximum 40 characters accepted
+            </p>
+          </section>
+
+          <section class="input-group">
+            <label for="Town">Suburb/Town</label>
+            <input
+              type="text"
+              name="Town"
+              id="Town"
+              placeholder="Town.."
+              pattern="[a-zA-Z0-9 ]{1,40}"
+              required
+            />
+            <p class="error-message">
+              Suburb/Town is required and only maximum 40 characters accepted
+            </p>
+          </section>
+
+          <section class="input-group">
+            <label for="State">State</label>
+            <select name="State" id="State" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="VIC">Victoria (VIC)</option>
+              <option value="NSW">New South Wales (NSW)</option>
+              <option value="QLD">Queensland (QLD)</option>
+              <option value="NT">Northern Territory (NT)</option>
+              <option value="WA">Western Australia (WA)</option>
+              <option value="SA">South Australia (SA)</option>
+              <option value="TAS">Tasmania (TAS)</option>
+              <option value="ACT">Australian Capital Territory (ACT)</option>
+            </select>
+            <p class="error-message">State is required to choose 1 option.</p>
+          </section>
+
+          <section class="input-group">
+            <label for="Job-Reference-Number">Job Reference Number</label>
+            <input
+              type="text"
+              name="Job-Reference-Number"
+              id="Job-Reference-Number"
+              placeholder="..."
+              pattern="[0-9a-zA-Z]{5}"
+              required
+            />
+            <p class="error-message">
+              Job Reference Number is required and exactly 5 alphanumeric
+              characters accepted.
+            </p>
+          </section>
+
+          <fieldset
+            class="input-group"
+            aria-labelledby="skills-legend"
+            id="skill-list"
+          >
+            <legend id="skills-legend">Skill List</legend>
+            <label for="mobile-development">
+              <input
+                checked
+                id="mobile-development"
+                type="checkbox"
+                name="Skill-List[]"
+                value="Mobile Development"
+                required
+              />
+              Mobile Development
+            </label>
+            <label for="web-development">
+              <input
+                id="web-development"
+                type="checkbox"
+                name="Skill-List[]"
+                value="Web Development"
+              />
+              Web Development
+            </label>
+            <label for="devop">
+              <input
+                id="devop"
+                type="checkbox"
+                name="Skill-List[]"
+                value="DevOps"
+              />
+              DevOps
+            </label>
+            <label for="database">
+              <input
+                id="database"
+                type="checkbox"
+                name="Skill-List[]"
+                value="Database"
+              />
+              Database
+            </label>
+            <label for="Other-Skills">
+              <input
+                type="checkbox"
+                name="Skill-List[]"
+                value="Other-Skills"
+                id="Other-Skills"
+              />
+              Other
+            </label>
+            <p class="error-message">
+              Skill List is required to choose 1 or more options.
+            </p>
+          </fieldset>
+
+          <section class="input-group" id="Other-Skills-Textarea">
+            <label for="Other-Skills-Input">Other Skills</label>
+            <textarea
+              name="Other-Skills"
+              id="Other-Skills-Input"
+              placeholder="List other skills here..."
+            ></textarea>
+          </section>
+
+          <button type="submit" aria-label="Submit job application">
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer role="contentinfo" class="main-footer">
+      <section>
+        <h2>Contact us</h2>
+        <section class="contacts">
+          <section>
+            <h3>Say Hello</h3>
+            <p>+60102906487</p>
+            <p>j23029452@newinti.student.edu.my</p>
+          </section>
+          <section>
+            <h3>Join InspireCode</h3>
+            <p>Stay Up to Date on YouYube</p>
+            <p class="youtube">
+              <a href="" target="_blank">
+                <img src="./images/youtube.svg" alt="youtube icon"
+              /></a>
+              Our YouTube
+            </p>
+          </section>
+        </section>
+      </section>
+      <section>
+        <h2>Find us</h2>
+        <section class="find-uss">
+          <section>
+            <h3>Myanmar</h3>
+            <p>Sule Road, Yangon</p>
+          </section>
+          <section>
+            <h3>Malaysia</h3>
+            <p>Ss15, Subang Jaya</p>
+          </section>
+        </section>
+      </section>
+      <section class="copy-right">
+        <p>All Right Reserved! &copy;</p>
+      </section>
+    </footer>
+  </body>
+</html>
