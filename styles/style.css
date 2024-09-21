@@ -48,7 +48,6 @@ body {
   }
 }
 
-
 .logo {
   width: 4rem;
 }
@@ -231,7 +230,6 @@ nav {
   margin-bottom: 3rem;
 }
 
-
 @keyframes hero-img-popup {
   from {
     opacity: 0;
@@ -276,8 +274,6 @@ nav {
   }
 }
 
-
-
 .service {
   padding: var(--big-screen-padding-axis);
   padding-top: 5rem;
@@ -301,13 +297,13 @@ nav {
   width: 100%;
   background-color: var(--secondarycolor);
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   color: var(--primarycolor);
   font-size: 1rem;
   padding: var(--big-screen-padding-axis);
 }
 
-.main-footer section{
+.main-footer section {
   grid-column: span 1;
 }
 
@@ -318,20 +314,20 @@ nav {
   align-items: start;
   gap: 3rem;
 }
-.main-footer section:last-child{
+.main-footer section:last-child {
   grid-column: span 2;
 }
-.copy-right{
+.copy-right {
   text-align: center;
 }
 
-.youtube{
+.youtube {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.youtube a img{
+.youtube a img {
   width: 2rem;
 }
 
@@ -496,7 +492,7 @@ nav {
   .main-footer {
     padding: 1.2rem;
   }
-  .main-footer section{
+  .main-footer section {
     grid-column: span 2;
   }
   .contacts,
@@ -534,7 +530,6 @@ nav {
 .form-container {
   flex: 1;
 }
-
 
 form {
   width: 100%;
@@ -586,7 +581,8 @@ form fieldset {
 input[type="text"],
 input[type="email"],
 input[type="date"],
-textarea,select {
+textarea,
+select {
   border: none;
   border-radius: 6px;
   padding: 12px;
@@ -770,6 +766,7 @@ ol {
   border-radius: 25px;
   padding: 10px;
   border: 0.3px solid var(--thirdcolor);
+  color: var(--sixthcolor);
 }
 
 .back-to-start-btn {
@@ -799,7 +796,6 @@ ol {
     width: 100%;
   }
 }
-
 
 /* about us page */
 .about-us {
@@ -1172,7 +1168,8 @@ td {
 .enhancement-card video {
   box-shadow: -1px -6px 74px -3px rgba(63, 15, 93, 0.75);
 }
-.enhancement video,.enhancement img,
+.enhancement video,
+.enhancement img,
 .description {
   width: 100%;
   grid-column: span 1;
@@ -1207,7 +1204,7 @@ td {
   gap: 1rem;
 }
 
-.code{
+.code {
   display: flex;
   flex-direction: column;
 }
@@ -1226,4 +1223,3 @@ td {
     grid-column: span 2;
   }
 }
-
