@@ -27,6 +27,7 @@ html {
   box-sizing: border-box; /* Include padding/border in total size */
 }
 
+/* hide the underline for all a tag*/
 a {
   text-decoration: none;
 }
@@ -699,6 +700,10 @@ input:focus:valid ~ .error-message {
 .job-detail-list {
   float: left;
   width: 70%;
+}
+
+.reference {
+  color: var(--secondarycolor);
 }
 
 /* Styles for job position cards */
